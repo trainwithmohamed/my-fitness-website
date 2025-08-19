@@ -1,0 +1,240 @@
+<html class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Montserrat:wght@400;500;700;900&amp;family=Poppins:wght@400;500;700;900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <title>Fitness Pro</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #ff3838;
+        --secondary-color: #ff914d;
+        --dark-bg: #111111;
+      }
+      body {
+        font-family: "Poppins", "Montserrat", sans-serif;
+      }
+      .glow-effect {
+        box-shadow: 0 0 15px 5px rgba(255, 56, 56, 0.5),
+          0 0 30px 10px rgba(255, 145, 77, 0.3);
+      }
+      .card-shadow {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--dark-bg)] text-white scroll-smooth">
+    <div
+      class="relative flex size-full min-h-screen flex-col overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-neutral-700 px-6 py-4 md:px-10 md:py-6"
+        >
+          <div class="flex items-center gap-3">
+            <svg
+              class="h-8 w-8 text-[var(--primary-color)]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+              ></path>
+              <path
+                clip-rule="evenodd"
+                d="M15.5 6.5C15.5 5.67 14.83 5 14 5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zm-5 0C10.5 5.67 9.83 5 9 5s-1.5.67-1.5 1.5.67 1.5 1.5 1.5 1.5-.67 1.5-1.5zM12 16c-1.68 0-3.14-.85-4-2.15.2-.17.4-.32.61-.45C9.32 12.67 10.6 12 12 12s2.68.67 3.39 1.4c.21.13.41.28.61.45C15.14 15.15 13.68 16 12 16z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <h2 class="text-xl font-bold tracking-tight md:text-2xl">
+              Fitness Coach
+            </h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              class="text-sm font-medium hover:text-[var(--primary-color)] transition-colors"
+              href="index.html"
+              >Home</a
+            >
+            <a
+              class="text-sm font-medium hover:text-[var(--primary-color)] transition-colors"
+              href="index.html#About"
+              >About</a
+            >
+            <a
+              class="text-sm font-medium hover:text-[var(--primary-color)] transition-colors"
+              href="#Download"
+              >Downloads</a
+            >
+            <a
+              class="text-sm font-medium hover:text-[var(--primary-color)] transition-colors"
+              href="apply.html"
+              >Contact</a
+            >
+          </nav>
+          <button class="md:hidden text-white">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6h16M4 12h16m-7 6h7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </button>
+        </header>
+        <main class="flex flex-1 flex-col">
+          <section
+            class="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
+            style="
+              background-image: linear-gradient(
+                  rgba(17, 17, 17, 0.7) 0%,
+                  rgba(17, 17, 17, 0.9) 100%
+                ),
+                url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80');
+            "
+          >
+            <div class="container mx-auto px-6 py-16 text-center">
+              <h1
+                class="text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl"
+              >
+                Free Downloads to
+                <span class="text-[var(--primary-color)]">Start</span> Your
+                Fitness Journey
+              </h1>
+              <p
+                class="mt-6 max-w-2xl mx-auto text-lg text-neutral-300 md:text-xl"
+              >
+                Kickstart your fitness goals with our exclusive guides. Download
+                now and transform your body and life.
+              </p>
+              <a
+                class="mt-10 inline-block rounded-full bg-[var(--primary-color)] px-8 py-3 text-lg font-bold uppercase tracking-wider text-white transition-all hover:bg-[var(--secondary-color)] hover:shadow-lg glow-effect focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+                href="#Download"
+              >
+                Send Me the Free PDFs
+              </a>
+            </div>
+          </section>
+          <section class="py-16 md:py-24 bg-neutral-900">
+            <div class="container mx-auto px-6">
+              <h2
+                class="text-3xl font-bold text-center mb-12 md:text-4xl"
+                id="Download"
+              >
+                What You'll Get
+              </h2>
+              <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div
+                  class="bg-[var(--dark-bg)] p-8 rounded-xl card-shadow border border-neutral-700 flex flex-col items-start"
+                >
+                  <span class="text-5xl mb-4">📘</span>
+                  <h3
+                    class="text-2xl font-bold mb-3 text-[var(--secondary-color)]"
+                  >
+                    Full Body Machine Workout Plan (Beginner)
+                  </h3>
+                  <p class="text-neutral-300 mb-6 flex-grow">
+                    A comprehensive workout plan designed for beginners,
+                    focusing on full-body exercises using gym machines. Easy to
+                    follow and highly effective.
+                  </p>
+                  <a
+                    class="mt-auto self-start rounded-full bg-transparent border-2 border-[var(--primary-color)] px-6 py-2 text-sm font-semibold text-[var(--primary-color)] transition-all hover:bg-[var(--primary-color)] hover:text-white"
+                    href="#apply-page"
+                  >
+                    Get This PDF
+                  </a>
+                </div>
+                <div
+                  class="bg-[var(--dark-bg)] p-8 rounded-xl card-shadow border border-neutral-700 flex flex-col items-start"
+                >
+                  <span class="text-5xl mb-4">🍽️</span>
+                  <h3
+                    class="text-2xl font-bold mb-3 text-[var(--secondary-color)]"
+                  >
+                    Simple Diet Tips for Muscle Growth
+                  </h3>
+                  <p class="text-neutral-300 mb-6 flex-grow">
+                    Essential dietary advice to support muscle growth, including
+                    meal ideas, nutritional timing, and supplement
+                    recommendations. Fuel your gains the right way.
+                  </p>
+                  <a
+                    class="mt-auto self-start rounded-full bg-transparent border-2 border-[var(--primary-color)] px-6 py-2 text-sm font-semibold text-[var(--primary-color)] transition-all hover:bg-[var(--primary-color)] hover:text-white"
+                    href="#apply-page"
+                  >
+                    Get This PDF
+                  </a>
+                </div>
+              </div>
+              <div class="text-center mt-16">
+                <a
+                  class="inline-block rounded-full bg-[var(--primary-color)] px-10 py-4 text-xl font-bold uppercase tracking-wider text-white transition-all hover:bg-[var(--secondary-color)] hover:shadow-lg glow-effect focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-opacity-50"
+                  href="apply.html"
+                >
+                  Send Me All PDFs
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer
+          class="border-t border-solid border-neutral-700 bg-neutral-900 py-8 text-center"
+        >
+          <p class="text-sm text-neutral-400">
+            © <span id="currentYear"></span> Fitness Coach. All rights reserved.
+          </p>
+          <p class="text-xs text-neutral-500 mt-1">Built for a fitter you.</p>
+        </footer>
+      </div>
+    </div>
+    <div class="h-0" id="apply-page"></div>
+  </body>
+  <script>
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+        
+    document.addEventListener("DOMContentLoaded", function () {
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+      // Handle page load with hash
+      if (window.location.hash) {
+        setTimeout(() => {
+          const element = document.querySelector(window.location.hash);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        }, 100);
+      }
+    });
+  </script>
+</html>
