@@ -199,32 +199,40 @@
 
     <script>
       let name = document.querySelector(".name h1");
-      name.textContent = localStorage.getItem("Name").slice(0, 2) || "MA";
+name.textContent = (localStorage.getItem("Name") || "MA").slice(0, 2);
 
-      let calories = document.querySelector(".calories-number");
-      calories.textContent = localStorage.getItem("Calories") || "950";
+let calories = document.querySelector(".calories-number");
+let caloriesValue = Number(localStorage.getItem("Calories") || 950);
+calories.textContent = caloriesValue;
 
-      let cupsWater = document.querySelector(".cups-water");
-      cupsWater.textContent = localStorage.getItem("CupsWater") || "8";
+let cupsWater = document.querySelector(".cups-water");
+let cupsGoal = Number(localStorage.getItem("CupsWater") || 8); // daily goal
+cupsWater.textContent = cupsGoal;
 
-      let totalCalories = Number(localStorage.getItem("TotalCalories") || 0);
-      let totalCups = Number(localStorage.getItem("TotalCups") || 0);
-      let caloriesValue = Number(calories.textContent);
-      let cupsValue = Number(cupsWater.textContent);
+let totalCalories = Number(localStorage.getItem("TotalCalories") || 0);
+let currentCups = Number(localStorage.getItem("CurrentCupsWater") || 0); // progress
 
-      document.documentElement.style.setProperty("--progress-c", `${(totalCalories / caloriesValue) * 100}%`);
-      document.documentElement.style.setProperty("--progress-w", `${(totalCups / cupsValue) * 100}%`);
+// Progress bars
+let calorieProgress = caloriesValue > 0 ? (totalCalories / caloriesValue) * 100 : 0;
+let waterProgress = cupsGoal > 0 ? (currentCups / cupsGoal) * 100 : 0;
 
-      let weekCalories = document.querySelector(".week-calories");
-      weekCalories.textContent = localStorage.getItem("weekCalories") || "0";
+document.documentElement.style.setProperty("--progress-c", `${calorieProgress}%`);
+document.documentElement.style.setProperty("--progress-w", `${waterProgress}%`);
 
-      let weekCups = document.querySelector(".week-cups");
-      weekCups.textContent = localStorage.getItem("lastWeekCups") || "0";
+// Weekly stats
+let weekCalories = document.querySelector(".week-calories");
+weekCalories.textContent = localStorage.getItem("weekCalories") || "0";
 
-      let weeklyWorkout = document.querySelector(".weekly-workout");
-      weeklyWorkout.textContent = JSON.parse(localStorage.getItem("weeklyProgress")).completedWorkouts || "0";
+let weekCups = document.querySelector(".week-cups");
+weekCups.textContent = localStorage.getItem("weekCups") || "0";
+
+let weeklyWorkout = document.querySelector(".weekly-workout");
+let weeklyProgress = JSON.parse(localStorage.getItem("weeklyProgress") || "{}");
+weeklyWorkout.textContent = weeklyProgress.completedWorkouts || "0";
+
     </script>
 </body>
 
 </html>
+
 
